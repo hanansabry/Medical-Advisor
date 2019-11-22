@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity">
+
+    <LinearLayout
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="MEDICAL "
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="ADVISOR"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp">
+
+        <LinearLayout
+            android:id="@+id/welcome_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yantramanav_medium"
+                android:gravity="center"
+                android:text="Welcome to Medical Advisor"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yantramanav_medium"
+                android:gravity="center"
+                android:text="We will help you to know initial diagnosis\n for your symptoms"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/gradient_bg"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="START"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:onClick="onStartClicked"/>
+
+</RelativeLayout>

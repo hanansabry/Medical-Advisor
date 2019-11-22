@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SymptomDetailsScreen">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:onClick="onBackClicked"
+        android:src="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="QUESTION"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text=" .3"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/diabetes_symptoms" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yantramanav_medium"
+            android:text="Describe details for your symptom?"
+            android:textSize="24sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_background">
+
+            <Spinner
+                android:layout_width="350dp"
+                android:layout_height="50dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/gradient_bg"
+        android:fontFamily="@font/yantramanav_medium"
+        android:onClick="onNextClicked"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>
