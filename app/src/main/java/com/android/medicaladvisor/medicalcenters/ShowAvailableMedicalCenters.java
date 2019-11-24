@@ -1,10 +1,12 @@
-package com.android.medicaladvisor;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.android.medicaladvisor.medicalcenters;
 
 import android.os.Bundle;
 
-public class ShowMedicalCenters extends AppCompatActivity {
+import com.android.medicaladvisor.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ShowAvailableMedicalCenters extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

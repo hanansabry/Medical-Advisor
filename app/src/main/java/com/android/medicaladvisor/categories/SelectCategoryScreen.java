@@ -1,10 +1,13 @@
-package com.android.medicaladvisor;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.android.medicaladvisor.categories;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.android.medicaladvisor.R;
+import com.android.medicaladvisor.initialsymptoms.InitialSymptomScreen;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SelectCategoryScreen extends AppCompatActivity {
 

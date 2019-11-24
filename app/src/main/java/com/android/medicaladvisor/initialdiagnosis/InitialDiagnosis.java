@@ -1,10 +1,13 @@
-package com.android.medicaladvisor;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.android.medicaladvisor.initialdiagnosis;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.android.medicaladvisor.R;
+import com.android.medicaladvisor.medicalcenters.ShowAvailableMedicalCenters;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class InitialDiagnosis extends AppCompatActivity {
 
@@ -19,6 +22,6 @@ public class InitialDiagnosis extends AppCompatActivity {
     }
 
     public void onNextClicked(View view) {
-        startActivity(new Intent(this, ShowMedicalCenters.class));
+        startActivity(new Intent(this, ShowAvailableMedicalCenters.class));
     }
 }
