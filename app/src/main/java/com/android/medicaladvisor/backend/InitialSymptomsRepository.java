@@ -57,7 +57,11 @@ public class InitialSymptomsRepository implements RetrievingRepository<InitialSy
                         }
                     }
                 }
-                callback.onRetrievingDataSuccessfully(initialSymptoms);
+                if (initialSymptoms.size() == 0) {
+                    callback.onRetrievingDataFailed("There is no initial symptoms for this category");
+                } else {
+                    callback.onRetrievingDataSuccessfully(initialSymptoms);
+                }
             }
 
             @Override

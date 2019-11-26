@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".medicalcenters.ShowAvailableMedicalCenters">
 
 
@@ -42,8 +43,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -55,52 +55,54 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:layout_marginTop="50dp"
-                    android:layout_marginStart="16dp"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/region_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Region: Kuwait City"
                         android:background="@null"
                         android:textColor="@android:color/white"
                         android:fontFamily="@font/yantramanav_medium"
-                        android:textSize="28sp"/>
+                        android:textSize="28sp"
+                        android:paddingStart="16dp"
+                        android:layout_gravity="center" />
 
-                    <!--<androidx.recyclerview.widget.RecyclerView-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/available_centers_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp" />
+
+                    <!--<TextView-->
                         <!--android:layout_width="match_parent"-->
                         <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginTop="8dp"/>-->
+                    <!--android:text="مستشفى هادي - مستشفى خاص"-->
+                    <!--android:background="@null"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:fontFamily="@font/yantramanav_medium"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:padding="8dp"/>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="مستشفى هادي - مستشفى خاص"
-                        android:background="@null"
-                        android:textColor="@android:color/black"
-                        android:fontFamily="@font/yantramanav_medium"
-                        android:textSize="20sp"
-                        android:padding="8dp"/>
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="مستشفى مبارك الكبير - مستشفى حكومي"-->
+                    <!--android:background="@null"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:fontFamily="@font/yantramanav_medium"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:padding="8dp"/>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="مستشفى مبارك الكبير - مستشفى حكومي"
-                        android:background="@null"
-                        android:textColor="@android:color/black"
-                        android:fontFamily="@font/yantramanav_medium"
-                        android:textSize="20sp"
-                        android:padding="8dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="مستوصف بنيد الجار - مستوصف"
-                        android:background="@null"
-                        android:textColor="@android:color/black"
-                        android:fontFamily="@font/yantramanav_medium"
-                        android:textSize="20sp"
-                        android:padding="8dp"/>
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="مستوصف بنيد الجار - مستوصف"-->
+                    <!--android:background="@null"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:fontFamily="@font/yantramanav_medium"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:padding="8dp"/>-->
 
                 </LinearLayout>
 
@@ -122,6 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@null"
+        android:onClick="onBackClicked"
         android:src="@drawable/ic_back" />
 
     <RelativeLayout
@@ -139,12 +142,14 @@
             android:padding="16dp" />
 
         <ImageButton
+            android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="@null"
             android:padding="16dp"
+            android:onClick="onSearchClicked"
             android:src="@drawable/ic_search" />
 
     </RelativeLayout>

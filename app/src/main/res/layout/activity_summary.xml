@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".summary.SummaryActivity">
+
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:onClick="onBackClicked"
+        android:src="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_bold"
+            android:text="Summary"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/summary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosis"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/diagnosis_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="الاشتباه في الاصابة السكر"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Region"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/region_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="Al Ahmady"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Center"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/medical_center_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="مستشفى الهادي"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

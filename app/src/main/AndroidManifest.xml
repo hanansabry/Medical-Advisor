@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".medicalcenters.ShowAvailableMedicalCenters"></activity>
+        <activity android:name=".summary.SummaryActivity"></activity>
+        <activity android:name=".medicalcenters.ShowAvailableMedicalCenters" />
         <activity android:name=".initialdiagnosis.InitialDiagnosis" />
         <activity android:name=".symptomdetails.SymptomDetailsScreen" />
         <activity android:name=".initialsymptoms.InitialSymptomScreen" />

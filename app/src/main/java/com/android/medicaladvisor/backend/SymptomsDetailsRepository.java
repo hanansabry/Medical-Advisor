@@ -39,7 +39,7 @@ public class SymptomsDetailsRepository implements RetrievingRepository<SymptomDe
                             if (initialSymptomId.equalsIgnoreCase(initialSymptomIdSnapshot.getKey())) {
                                 //get symptom detail data and add it to the list
                                 SymptomDetail symptomDetail = new SymptomDetail();
-                                symptomDetail.setId(symptomDetail.getId());
+                                symptomDetail.setId(symptomDetailSnapshot.getKey());
                                 symptomDetail.setName(symptomDetailSnapshot.child("name").getValue(String.class));
                                 symptomDetail.setInitialSymptomIds(initialSymptomId);
 
@@ -48,7 +48,11 @@ public class SymptomsDetailsRepository implements RetrievingRepository<SymptomDe
                         }
                     }
                 }
-                callback.onRetrievingDataSuccessfully(symptomDetailsList);
+                if (symptomDetailsList.size() == 0) {
+                    callback.onRetrievingDataFailed("There is no Symptom details for this Initial Symptom");
+                } else {
+                    callback.onRetrievingDataSuccessfully(symptomDetailsList);
+                }
             }
 
             @Override

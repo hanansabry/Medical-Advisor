@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".initialdiagnosis.InitialDiagnosis">
 
     <ImageButton
@@ -55,28 +56,31 @@
 
 
         <TextView
+            android:id="@+id/category_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:background="@null"
             android:fontFamily="@font/yantramanav_medium"
-            android:text="Speciality: غير محدد" />
+            android:text="@string/speciality_value" />
 
         <TextView
+            android:id="@+id/initial_symptoms_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:background="@null"
             android:fontFamily="@font/yantramanav_medium"
-            android:text="Initial Symptom: غثيان" />
+            android:text="@string/initial_symptom_value" />
 
         <TextView
+            android:id="@+id/symptom_detail_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:background="@null"
             android:fontFamily="@font/yantramanav_medium"
-            android:text="Main Symptom: اصفرار البشرة" />
+            android:text="@string/symptom_detail_value" />
 
     </LinearLayout>
 
@@ -139,13 +143,14 @@
 
 
             <TextView
+                android:id="@+id/diagnosis_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="@font/yantramanav_medium"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="الاشتباه في الإصابة بالسكر"
+                android:text="لا يوجد"
                 android:textSize="20sp" />
 
             <!--</LinearLayout>-->
@@ -155,7 +160,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/start_button"
+        android:id="@+id/next_button"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
